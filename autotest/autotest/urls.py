@@ -24,5 +24,7 @@ urlpatterns = [
     path('logout/', views.logout),
     path('product/', include('product.urls')),
     path('apitest/', include('apitest.urls')),
+    path('bug/', include('bug.urls')),
+    path('set/', include('set.urls')),
 
 ]

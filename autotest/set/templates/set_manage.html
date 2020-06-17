@@ -22,24 +22,21 @@
     </div>
 </nav>
 
-<!-- 产品列表-->
-<div class="row" style="padding-top: 20px;">
+<!-设置列表-->
+<div class="row" style="padding-top: 70px;">
     <div class="col-md-11">
         <table class="table table-striped">
             <thead>
-            <tr><td>&nbsp;</td></tr>
             <tr>
-                <th>ID</th><th>产品名称</th><th>产品描述</th><th>产品负责人</th><th>创建时间</th>
+                <th>ID</th><th>设置名称</th><th>设置的值</th>
             </tr>
             </thead>
             <tbody>
-            {% for product in products %}
+            {% for set in sets %}
             <tr>
-                <td>{{ product.id }}</td>
-                <td>{{ product.productname }}</td>
-                <td>{{ product.productdesc }}</td>
-                <td>{{ product.producter }}</td>
-                <td>{{ product.create_time }}</td>
+                <td>{{ set.id }}</td>
+                <td>{{ set.setname }}</td>
+                <td>{{ set.setvalue }}</td>
             </tr>
             {% endfor %}
             </tbody>

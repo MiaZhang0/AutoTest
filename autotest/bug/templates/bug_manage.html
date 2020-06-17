@@ -22,24 +22,29 @@
     </div>
 </nav>
 
-<!-- 产品列表-->
-<div class="row" style="padding-top: 20px;">
+<!-bug 列表-->
+<div class="row" style="padding-top: 70px;">
     <div class="col-md-11">
         <table class="table table-striped">
             <thead>
-            <tr><td>&nbsp;</td></tr>
             <tr>
-                <th>ID</th><th>产品名称</th><th>产品描述</th><th>产品负责人</th><th>创建时间</th>
+                <th>ID</th><th>产品</th><th>bug名称</th><th>bug详情</th><th>解决状态</th><th>严重程度</th><th>优先级</th>
+                <th>创建人</th><th>指派给</th><th>创建时间</th>
             </tr>
             </thead>
             <tbody>
-            {% for product in products %}
+            {% for bug in bugs %}
             <tr>
-                <td>{{ product.id }}</td>
-                <td>{{ product.productname }}</td>
-                <td>{{ product.productdesc }}</td>
-                <td>{{ product.producter }}</td>
-                <td>{{ product.create_time }}</td>
+                <td>{{ bug.id }}</td>
+                <td>{{ bug.Product.productname }}</td>
+                <td>{{ bug.bugname }}</td>
+                <td title="{{ bug.bugdetail }}">{{ bug.bugdetail }}</td>
+                <td>{{ bug.bugstatus }}</td>
+                <td>{{ bug.buglevel }}</td>
+                <td>{{ bug.bugpriority }}</td>
+                <td>{{ bug.bugcreater }}</td>
+                <td>{{ bug.bugassign }}</td>
+                <td>{{ bug.create_time}}</td>
             </tr>
             {% endfor %}
             </tbody>

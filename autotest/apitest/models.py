@@ -39,7 +39,7 @@ class Apistep(models.Model):
     def __str__(self):
         return self.apiname
 
-
+# 单一场景接口功能模块
 class Apis(models.Model):
     Product = models.ForeignKey('product.Product', on_delete=models.CASCADE, null=True)  # 关联产品ID
     apiname = models.CharField('接口名称', max_length=100)  # 接口标题
