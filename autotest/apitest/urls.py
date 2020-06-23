@@ -5,4 +5,5 @@ urlpatterns = [
     path('apitest_manage/', views.apitest_manage),
     path('apistep_manage/', views.apistep_manage),
     path('apis_manage/', views.apis_manage),
+    path('test_report/', views.test_report),
 ]
